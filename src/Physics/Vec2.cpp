@@ -67,22 +67,22 @@ void Vec2::operator/=(const float n)
 }
 
 // Methods
-Vec2 Vec2::rotate(const float angle) const
+Vec2 Vec2::Rotate(const float angle) const
 {
     float rad = angle * M_PI / 180;
     float res_x = x * cos(rad) - y * sin(rad);
     float res_y = x * sin(rad) + y * cos(rad);
     return Vec2(res_x, res_y);
 }
-float Vec2::magnitude() const
+float Vec2::Magnitude() const
 {
     return sqrt(x * x + y * y);
 }
-float Vec2::magnitudeSquared() const
+float Vec2::MagnitudeSquared() const
 {
     return x * x + y * y;
 }
-void Vec2::normalize()
+void Vec2::Normalize()
 {
     float mag = magnitude();
     if (mag == 0)
@@ -90,25 +90,25 @@ void Vec2::normalize()
     x /= mag;
     y /= mag;
 }
-Vec2 Vec2::unitVector() const
+Vec2 Vec2::UnitVector() const
 {
     float mag = magnitude();
     if (mag == 0)
         return Vec2(0, 0);
     return Vec2(x / mag, y / mag);
 }
-Vec2 Vec2::normal() const
+Vec2 Vec2::Normal() const
 {
     Vec2 res(-y, x);
     res.normalize();
     return res;
 }
 
-float Vec2::dot(const Vec2 &v) const
+float Vec2::Dot(const Vec2 &v) const
 {
     return x * v.x + y * v.y;
 }
-float Vec2::cross(const Vec2 &v) const
+float Vec2::Cross(const Vec2 &v) const
 {
     return x * v.y - y * v.x;
 }

@@ -30,14 +30,14 @@ public:
     void operator/=(const float n);
 
     // Methods
-    Vec2 rotate(const float angle) const;
-    float magnitude() const;
-    float magnitudeSquared() const;
-    void normalize();
-    Vec2 unitVector() const;
-    Vec2 normal() const;
-    float dot(const Vec2 &v) const;
-    float cross(const Vec2 &v) const;
+    Vec2 Rotate(const float angle) const;
+    float Magnitude() const;
+    float MagnitudeSquared() const;
+    void Normalize();
+    Vec2 UnitVector() const;
+    Vec2 Normal() const;
+    float Dot(const Vec2 &v) const;
+    float Cross(const Vec2 &v) const;
 };
 
 #endif
